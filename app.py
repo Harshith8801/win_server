@@ -18,7 +18,7 @@ path = "C:/Users/yeera/OneDrive/Desktop/test/scraped_data.csv"
 # Path to Firefox binary (install location on your machine)
 # Path to Firefox binary (install location on your machine)
 firefox_binary_path = r"C:/Program Files/Mozilla Firefox/firefox.exe"  # Update this if Firefox is installed in a different location
-geckodriver_path = r"C:\Users\yeera\Downloads\geckodriver-v0.35.0-win64\geckodriver.exe"
+geckodriver_path = r"C:/Users/yeera/Downloads/geckodriver-v0.35.0-win64/geckodriver.exe"
 
 # Configure Firefox options
 firefox_options = Options()
