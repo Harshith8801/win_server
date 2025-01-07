@@ -15,11 +15,15 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 path = "C:/Users/yeera/OneDrive/Desktop/test/scraped_data.csv"
 
+# Path to Firefox binary (install location on your machine)
+firefox_binary_path = "C:/Program Files/Mozilla Firefox/firefox.exe"  # Update this if Firefox is installed in a different location
+
 # Configure Firefox options
 firefox_options = Options()
-firefox_options.add_argument("--headless")  # Headless for server use
+firefox_options.add_argument("--headless")  # Optional: runs Firefox in headless mode (no GUI)
 firefox_options.add_argument("--no-sandbox")
 firefox_options.add_argument("--disable-dev-shm-usage")
+firefox_options.binary_location = firefox_binary_path  # Set the binary location
 
 # Path to geckodriver
 geckodriver_path = "C:/Users/yeera/Downloads/geckodriver-v0.35.0-win64/geckodriver.exe"
@@ -123,7 +127,6 @@ def login_and_navigate():
         driver.quit()
 
 # Function to scrape data and process it
-# Function to scrape data and process it
 def scrape_pages(csv_path=path, limit=2000):
     page_number = 1
 
@@ -185,7 +188,6 @@ def scrape_pages(csv_path=path, limit=2000):
             break
 
     logger.info("Scraping process completed.")
-
 
 # Main execution
 if __name__ == "__main__":
