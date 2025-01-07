@@ -17,16 +17,14 @@ path = "C:/Users/yeera/OneDrive/Desktop/test/scraped_data.csv"
 
 # Path to Firefox binary (install location on your machine)
 firefox_binary_path = "C:/Program Files/Mozilla Firefox/firefox.exe"  # Update this if Firefox is installed in a different location
-geckodriver_path = "C:/Users/yeera/Downloads/geckodriver-v0.35.0-win64/geckodriver.exe"
+geckodriver_path = r"C:\Users\yeera\Downloads\geckodriver-v0.35.0-win64\geckodriver.exe"
 # Configure Firefox options
 firefox_options = Options()
 firefox_options.add_argument("--headless")  # Optional: runs Firefox in headless mode (no GUI)
 firefox_options.add_argument("--no-sandbox")
 firefox_options.add_argument("--disable-dev-shm-usage")
-firefox_options.binary_location = firefox_binary_path  # Set the binary location
+firefox_options.binary_location = firefox_binary_path  # Set the binary locatio
 
-# Path to geckodriver
-geckodriver_path = "C:/Users/yeera/Downloads/geckodriver-v0.35.0-win64/geckodriver.exe"
 if not os.path.exists(geckodriver_path):
     logger.error(f"Geckodriver not found at {geckodriver_path}. Please check the path.")
 
