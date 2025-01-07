@@ -40,4 +40,4 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Command to run your Python script
-CMD ["python", "your_script.py"]
+CMD ["python", "app.py"]
